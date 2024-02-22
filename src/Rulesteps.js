@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     width: "auto", // Set to 'auto' for normal width
     alignSelf: "flex-end",
+    textTransform: "capitalize", // Capitalize only the first letter
   },
   radioGroup: {
     flexDirection: "row",
@@ -138,7 +139,7 @@ function Rulesteps() {
             <Button
               variant="contained"
               color="primary"
-              style={{ marginLeft: "30px" }}
+              style={{ marginLeft: "30px", textTransform: "capitalize" }}
             >
               Go
             </Button>
@@ -159,11 +160,15 @@ function Rulesteps() {
                 variant="contained"
                 color="primary"
                 onClick={handleNext}
-                style={{ marginRight: "18px" }}
+                style={{ marginRight: "18px", textTransform: "capitalize" }}
               >
                 Next : Specify Criteria
               </Button>
-              <Button variant="contained" onClick={handleBack}>
+              <Button
+                variant="contained"
+                onClick={handleBack}
+                style={{ textTransform: "capitalize" }}
+              >
                 Back
               </Button>
             </div>
@@ -192,6 +197,8 @@ function Rulesteps() {
               display: "flex",
               alignItems: "center",
               marginBottom: "20px",
+              padding: "16px", // Added padding
+              margin: "16px", // Added margin
             }}
           >
             <Typography
@@ -222,11 +229,15 @@ function Rulesteps() {
               variant="contained"
               color="primary"
               onClick={handleNext}
-              style={{ marginRight: "40px" }}
+              style={{ marginLeft: "270px",marginRight:"20px", textTransform: "capitalize" }}
             >
               Next : Confirm & Verify
             </Button>
-            <Button variant="contained" onClick={handleBack}>
+            <Button
+              variant="contained"
+              onClick={handleBack}
+              style={{ textTransform: "capitalize" }}
+            >
               Back
             </Button>
           </div>
@@ -247,7 +258,7 @@ function Rulesteps() {
             onClick={handleReset}
             className={classes.button}
           >
-            Restart
+            Done
           </Button>
         </div>
       )}
