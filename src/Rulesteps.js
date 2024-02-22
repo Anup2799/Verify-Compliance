@@ -158,18 +158,18 @@ function Rulesteps() {
             <div>
               <Button
                 variant="contained"
-                color="primary"
-                onClick={handleNext}
+                onClick={handleBack}
                 style={{ marginRight: "18px", textTransform: "capitalize" }}
               >
-                Next : Specify Criteria
+                Back
               </Button>
               <Button
                 variant="contained"
-                onClick={handleBack}
+                color="primary"
+                onClick={handleNext}
                 style={{ textTransform: "capitalize" }}
               >
-                Back
+                Next : Specify Criteria
               </Button>
             </div>
           </div>
@@ -227,18 +227,23 @@ function Rulesteps() {
           <div>
             <Button
               variant="contained"
-              color="primary"
-              onClick={handleNext}
-              style={{ marginLeft: "270px",marginRight:"20px", textTransform: "capitalize" }}
-            >
-              Next : Confirm & Verify
-            </Button>
-            <Button
-              variant="contained"
               onClick={handleBack}
-              style={{ textTransform: "capitalize" }}
+              style={{
+                marginLeft: "270px",
+                marginRight: "20px",
+                textTransform: "capitalize",
+              }}
             >
               Back
+            </Button>
+
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={handleNext}
+              style={{ textTransform: "capitalize" }}
+            >
+              Next : Confirm & Verify
             </Button>
           </div>
         </FormControl>
